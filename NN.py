@@ -1,30 +1,20 @@
 # This Python 3 environment comes with many helpful analytics libraries installed
 # It is defined by the kaggle/python Docker image: https://github.com/kaggle/docker-python
 # For example, here's several helpful packages to load
-
+# Credit to: https://www.kaggle.com/code/anshchaurasiya/skin-cancer-detection
 #OS libs
-import os
-import shutil
-import itertools
-import pathlib
-from PIL import Image
 
 #Data handling tools
-import cv2
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
 import seaborn as sns
 sns.set_style('whitegrid')
-from sklearn.model_selection import train_test_split
-from sklearn.metrics import confusion_matrix , classification_report
 
 #Deep learning libs
 import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras.layers import Sequential
-from tensorflow.keras.layers import Conv2D , MaxPooling2D , Flatten , Activation , Dense , Dropout , BatchNormalization
-from tensorflow.keras.optimizers import Adam , Adamax
+from tensorflow.keras.layers import \
+    Dense , Dropout , BatchNormalization
+from tensorflow.keras.optimizers import \
+    Adamax
 from tensorflow.keras import regularizers
 
 
