@@ -1,0 +1,4 @@
+ngrok start myapp --config="C:\Users\Hrvoje\.ngrok2\ngrok.yml"
+uvicorn server:app --host 0.0.0.0 --port 50
+
+yaml datoteka se dobi na zahtev zaradi varnosti, servere mora biti izklopljen, če se ne uporablja.
