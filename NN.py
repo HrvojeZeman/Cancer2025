@@ -11,10 +11,8 @@ sns.set_style('whitegrid')
 #Deep learning libs
 import tensorflow as tf
 from tensorflow.keras.layers import Sequential
-from tensorflow.keras.layers import \
-    Dense , Dropout , BatchNormalization
-from tensorflow.keras.optimizers import \
-    Adamax
+from tensorflow.keras.layers import Dense , Dropout, BatchNormalization
+from tensorflow.keras.optimizers import Adamax
 from tensorflow.keras import regularizers
 
 
@@ -25,7 +23,7 @@ base_model = tf.keras.applications.efficientnet.EfficientNetB7(include_top = Fal
 model = Sequential([
     base_model,
     BatchNormalization(axis= -1 , momentum= 0.99 , epsilon= 0.001),
-    Dense(256, kernel_regularizer = regularizers.l2(l= 0.016) , activity_regularizer = regularizers.l1(0.006), bias_regularizer= regularizers.l1(0.006) , activation = 'relu'),
+    Dense(256, kernel_regularizer = regularizers.l2(l= 0.016), activity_regularizer = regularizers.l1(0.006), bias_regularizer= regularizers.l1(0.006) , activation = 'relu'),
     Dropout(rate= 0.4 , seed = 75),
     Dense(num_class, activation = 'softmax')
 ])
